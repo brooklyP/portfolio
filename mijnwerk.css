@@ -1,0 +1,38 @@
+body {
+    font-family: Garamond, serif;
+    background: linear-gradient(to bottom, #F4DDB1, #D6C7B4);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 20px;
+    top: 0;
+    bottom: 0; /* Stretch de container van boven naar onder */
+    justify-content: space-between; /* Verdeel de knoppen gelijkmatig langs de lengte van de container */
+}
+
+.button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+#fotoTekst {
+    position: absolute;
+    top: 50%;
+    left: 200px; /* Aanpassen voor gewenste positie */
+    transform: translateY(-50%);
+    display: none; /* Verbergt de sectie totdat er op een knop wordt geklikt */
+}

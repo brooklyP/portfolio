@@ -1,6 +1,67 @@
-background{
+/* Zorg ervoor dat de body geen marge heeft */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #F4DDB1, #D6C7B4);
+    height: 100vh;
+    margin: 0;
+}
 
-background-color: #F4DDB1;
+/* Header stijlen */
+.header {
+    position: relative; /* Voeg position: relative toe aan de header */
+    background-color: #D9B99B;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%; /* Zorgt ervoor dat de header de volledige breedte beslaat */
+    box-sizing: border-box; /* Inclusief padding in de totale breedte */
+}
 
+/* Afbeelding stijlen */
+.header img {
+    position: absolute; /* Stel de afbeelding in op absolute positionering */
+    top: 50%; /* Plaats de afbeelding op 50% van de bovenkant van de header */
+    left: 50%; /* Plaats de afbeelding op 50% van de linkerzijde van de header */
+    transform: translate(-50%, -50%); /* Verplaats de afbeelding naar het midden van de header */
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder is dan de header */
+    max-height: 100%; /* Zorg ervoor dat de afbeelding niet hoger is dan de header */
+}
 
+/* H1-stijlen */
+h1 {
+    text-align: center;
+    margin-top: 12%;
+}
+
+/* P-stijlen */
+p {
+    text-align: center;
+}
+
+/* Knopstijlen */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Knopstijlen */
+.button {
+    padding: 10px 40px;
+    margin-right: 160px;
+    border-radius: 10px;
+    background-color: #D6C7B4;
+    border: none;
+    color: rgb(0, 0, 0); /* Tekstkleur zwart */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 3px 6px 1px rgba(0, 0, 0, 0.1); /* Zwarte schaduw */
+}
+
+.button:last-child {
+    margin-right: 0; /* Verwijder rechtermarge voor het laatste knop */
 }
