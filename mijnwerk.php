@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="buttons">
-        <button class="button" id="knop1">Knop 1</button>
-        <button class="button" id="knop2">Knop 2</button>
+        <button class="button" id="knop1">yeti hunters</button>
+        <button class="button" id="knop2">vacature website</button>
         <button class="button" id="knop3">Knop 3</button>
         <button class="button" id="knop4">Knop 4</button>
         <button class="button" id="knop5">Knop 5</button>

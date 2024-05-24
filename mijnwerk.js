@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Event listeners toevoegen aan de knoppen
     document.getElementById("knop1").addEventListener("click", function() {
-        toonFotoTekst("foto1.jpg", "Tekst voor Knop 1");
+        toonFotoTekst("yeti.png", "Tekst voor Knop 1");
     });
 
     document.getElementById("knop2").addEventListener("click", function() {
