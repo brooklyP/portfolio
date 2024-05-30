@@ -1,4 +1,6 @@
 <?php
+// login_process.php
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -29,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_id'] = $id;
         $_SESSION['gebruikersnaam'] = $gebruikersnaam;
 
-        header("Location: dashboard.php"); // Redirect to a dashboard or home page
+        header("Location: admin_dashboard.php"); // Redirect to admin dashboard
         exit();
     } else {
-        header("Location: error.php"); // Redirect to error page on invalid login
+        header("Location: login.php?error=invalidcredentials"); // Redirect to login page with error message
         exit();
     }
 

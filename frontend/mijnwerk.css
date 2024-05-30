@@ -1,38 +1,47 @@
 body {
-    font-family: Garamond, serif;
-    background: linear-gradient(to bottom, #F4DDB1, #D6C7B4);
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
+    background-color: #F5F5DD;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 20px;
-    top: 0;
-    bottom: 0; /* Stretch de container van boven naar onder */
-    justify-content: space-between; /* Verdeel de knoppen gelijkmatig langs de lengte van de container */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .button {
-    padding: 10px;
-    border: none;
-    background-color: transparent;
+    background-color: #F4DDB1;
     color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
+.button:hover {
+    background-color: #D6C7B4;
+}
 
 #fotoTekst {
-    position: absolute;
-    top: 50%;
-    left: 200px; /* Aanpassen voor gewenste positie */
-    transform: translateY(-50%);
-    display: none; /* Verbergt de sectie totdat er op een knop wordt geklikt */
+    text-align: center;
+}
+
+#fotoTekst img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }

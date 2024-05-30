@@ -22,6 +22,11 @@
                 <button type="submit">Login</button>
                 <a href="signup.php" class="signup-button">Sign Up</a>
             </div>
+            <?php
+            if (isset($_GET['error']) && $_GET['error'] == 'invalidcredentials') {
+                echo '<p style="color: red;">Invalid username or password. Please try again.</p>';
+            }
+            ?>
         </form>
     </div>
 </body>
