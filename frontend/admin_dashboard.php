@@ -28,11 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Read file contents
         $fotoContent = file_get_contents($fileTmpPath);
+        $fotoBase64 = base64_encode($fotoContent);
 
         // Prepare SQL statement
-        $sql = "INSERT INTO werk_inhoud (knop_id, foto, tekst) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO werk_inhoud (knop_id, foto, tekst) VALUES (?, ?, ?)
+                ON DUPLICATE KEY UPDATE foto = VALUES(foto), tekst = VALUES(tekst)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("iss", $knop_id, $fotoContent, $tekst);
+        $stmt->bind_param("iss", $knop_id, $fotoBase64, $tekst);
 
         // Execute SQL statement
         if ($stmt->execute()) {
@@ -47,3 +49,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin_dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <form action="admin_dashboard.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="knop_id">Knop ID</label>
+                <input type="number" id="knop_id" name="knop_id" required>
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto</label>
+                <input type="file" id="foto" name="foto" required>
+            </div>
+            <div class="form-group">
+                <label for="tekst">Tekst</label>
+                <textarea id="tekst" name="tekst" required></textarea>
+            </div>
+            <button type="submit">Opslaan</button>
+        </form>
+    </div>
+</body>
+</html>

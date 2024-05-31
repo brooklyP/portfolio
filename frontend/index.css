@@ -1,79 +1,73 @@
-/* Zorg ervoor dat de body geen marge heeft */
 body {
+    font-family: Garamond, serif;
+    background-color: #F5F5DD;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #F4DDB1, #D6C7B4);
-    height: 100vh;
-    margin: 0;
 }
 
-/* Header stijlen */
 .header {
-    position: relative; /* Voeg position: relative toe aan de header */
-    background-color: #D9B99B;
-    color: white;
-    padding: 50px;
+    background-color: #F4DDB1;
+    padding: 10px 0;
     text-align: center;
-    font-size: 24px;
-    width: 100%; /* Zorgt ervoor dat de header de volledige breedte beslaat */
-    box-sizing: border-box; /* Inclusief padding in de totale breedte */
 }
 
-/* Afbeelding stijlen */
 .header img {
-    position: absolute; /* Stel de afbeelding in op absolute positionering */
-    top: 50%; /* Plaats de afbeelding op 50% van de bovenkant van de header */
-    left: 50%; /* Plaats de afbeelding op 50% van de linkerzijde van de header */
-    transform: translate(-50%, -50%); /* Verplaats de afbeelding naar het midden van de header */
-    max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder is dan de header */
-    max-height: 100%; /* Zorg ervoor dat de afbeelding niet hoger is dan de header */
+    height: 50px;
 }
 
-/* H1-stijlen */
+.test {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.test li {
+    list-style-type: none;
+}
+
+.test a {
+    text-decoration: none;
+    color: #333;
+    background-color: #D6C7B4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.test a:hover {
+    background-color: #b89c8e;
+}
+
 h1 {
     text-align: center;
-    margin-top: 12%;
+    color: #D6C7B4;
 }
 
-/* P-stijlen */
 p {
     text-align: center;
+    font-size: 1.2em;
 }
 
-/* Knopstijlen */
 .buttons {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
 
-/* Knopstijlen */
 .button {
-    padding: 10px 40px;
-    margin-right: 160px;
-    border-radius: 10px;
     background-color: #D6C7B4;
+    color: white;
     border: none;
-    color: rgb(0, 0, 0); /* Tekstkleur zwart */
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
-    box-shadow: 3px 6px 1px rgba(0, 0, 0, 0.1); /* Zwarte schaduw */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.button:last-child {
-    margin-right: 0; /* Verwijder rechtermarge voor het laatste knop */
-}
-
-
-.test {
-
-right: 100px;
-
-        
-    
-
-
-
+.button:hover {
+    background-color: #b89c8e;
 }
