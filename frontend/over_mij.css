@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Garamond, serif;
     background-color: #F5F5DD;
     color: #333;
     margin: 0;
@@ -10,64 +10,66 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+
+header {
     background-color: #F4DDB1;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
+    margin: 0;
+}
+
+section.about, section.contact {
+    margin-bottom: 20px;
+}
+
+section h2 {
     color: #D6C7B4;
 }
 
-.about, .contact {
-    margin-top: 20px;
+form {
+    background-color: #F4DDB1;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.about h2, .contact h2 {
-    color: #D6C7B4;
-    border-bottom: 2px solid #D6C7B4;
-    padding-bottom: 5px;
-}
-
-.about p {
-    line-height: 1.6;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact .form-group {
+.form-group {
     margin-bottom: 15px;
 }
 
-.contact label {
+.form-group label {
+    display: block;
     margin-bottom: 5px;
-    color: #333;
 }
 
-.contact input, .contact textarea {
-    padding: 10px;
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
 }
 
-.contact textarea {
+.form-group textarea {
     height: 100px;
+    resize: vertical;
 }
 
-.contact button {
-    padding: 10px;
+button {
     background-color: #D6C7B4;
+    color: white;
     border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.contact button:hover {
+button:hover {
     background-color: #b89c8e;
 }
