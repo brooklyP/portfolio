@@ -3,10 +3,7 @@ session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Zorg ervoor dat je PHPMailer correct hebt gedownload en geconfigureerd
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require '../vendor/autoload.php'; // Zorg ervoor dat dit pad correct is
 
 // Database connection
 $servername = "localhost";
@@ -40,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.example.com'; // Zet je SMTP-server hier
             $mail->SMTPAuth = true;
-            $mail->Username = 'phpmailer251106@gmail.com'; // Zet je SMTP-gebruikersnaam hier
-            $mail->Password = '1234poepkaka1234'; // Zet je SMTP-wachtwoord hier
+            $mail->Username = 'jouw-email@example.com'; // Zet je SMTP-gebruikersnaam hier
+            $mail->Password = 'jouw-wachtwoord'; // Zet je SMTP-wachtwoord hier
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
